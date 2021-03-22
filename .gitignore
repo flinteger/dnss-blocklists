@@ -1,0 +1,7 @@
+/cache/https_*
+/sources/test.json
+/filters/test.*
+/.vscode/
+__pycache__
+/note.md
+*.log

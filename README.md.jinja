@@ -1,0 +1,36 @@
+# DNS Blocklists
+
+![CI](https://github.com/flinteger/dnss-blocklists/workflows/CI/badge.svg?branch=master)
+![CD](https://github.com/flinteger/dnss-blocklists/workflows/CD/badge.svg?branch=master)
+[![last commit](https://img.shields.io/github/last-commit/flinteger/dnss-blocklists.svg)](https://github.com/flinteger/dnss-blocklists/commits/release)
+[![repo size](https://img.shields.io/github/repo-size/flinteger/dnss-blocklists.svg)](https://github.com/flinteger/dnss-blocklists)
+
+
+DNS blocklists aggregate from various well known sources.
+
+*Data automatically update every 3 hours.*
+
+**Last updated**: {{ last_updated_at }}
+
+## Blocklists
+
+{% for blocklist in blocklists %}
+* [{{blocklist.name}}](#{{blocklist.name}}){% endfor %}
+
+{% for blocklist in blocklists %}
+### {{ blocklist.name }}
+
+{{ blocklist.description }}
+
+**Data source**: [{{blocklist.source_file}}]({{blocklist.source_file}})
+
+**Count**: {{ blocklist.count }}
+
+**Download**:
+
+| Format | URL |
+|----|----|
+{% for format in blocklist.formats %}| {{ format.name }} | [{{blocklist.url}}{{format.ext}}]({{ blocklist.url }}{{ format.ext }}) |
+{% endfor %}
+
+{% endfor %}

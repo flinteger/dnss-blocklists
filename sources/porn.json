@@ -1,0 +1,47 @@
+{
+  "name": "porn",
+  "description": "Porn",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/tiuxo/hosts/master/porn",
+      "format": "hosts"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Clefspeare13/pornhosts/master/0.0.0.0/hosts",
+      "format": "hosts"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mhxion/pornaway/master/hosts/porn_sites.txt",
+      "format": "hosts"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts",
+      "format": "hosts"
+    }
+  ],
+  "exclusions": [
+    "*.anonym.to",
+    "*.cliqz.com",
+    "*.dickssportinggoods.com",
+    "*.fastpic.ru",
+    "*.findicons.com",
+    "*.jwpcdn.com",
+    "*.meltwater.com",
+    "*.openmultipleurl.com",
+    "*.rebrand.ly",
+    "*.scansafe.net",
+    "*.sucuri.net",
+    "*.x-diesel.com",
+    "*.zaobao.com.sg"
+  ],
+  "additions": [
+    "babes.com",
+    "hotgaylist.com",
+    "peeperz.com",
+    "playboytv.com",
+    "porniq.com",
+    "sextube.com",
+    "skipthegames.com",
+    "whynotbi.com"
+  ]
+}
