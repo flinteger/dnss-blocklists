@@ -110,8 +110,9 @@ jobs:
       run: |
         git checkout --orphan release
 
-        ./scripts/gen_readme.py > README.md
-        git add blocklists README.md
+        # ./scripts/gen_readme.py > README.md
+        # git add blocklists README.md
+        git add blocklists
         git commit -m "Update blocklists from upstream" blocklists README.md
 
     - name: Force push data branch changes
