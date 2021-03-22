@@ -73,7 +73,7 @@ jobs:
         # make all
         # ./scripts/process_all.sh
 
-        # ./scripts/process.py ./sources/ad.json
+        ./scripts/process.py ./sources/ad.json
         # ./scripts/process.py ./sources/dating.json
         ./scripts/process.py ./sources/gambling.json
         ./scripts/process.py ./sources/malicious.json
