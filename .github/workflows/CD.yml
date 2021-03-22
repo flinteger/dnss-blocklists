@@ -66,6 +66,7 @@ jobs:
         # https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#adding-a-system-path
         echo "/home/runner/.local/bin" >> $GITHUB_PATH
         make setup
+        mkdir -p blocklists
 
     - name: Build blocklists from upstream
       run: |
