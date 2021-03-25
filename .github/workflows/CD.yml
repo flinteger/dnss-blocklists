@@ -91,17 +91,19 @@ jobs:
 
     - name: Check changes and clean cache
       run: |
-        ls -l blocklists
+        ls -lh blocklists
 
-        wc -l blocklists/*.domains.txt
+        wc -l blocklists/*.domains.txt | sort -n
 
         ./scripts/clean_okcache.py
-        ls -lh cache/nxdomains cache/okdomains cache/tbddomains
+        ls -lh cache/nxdomains cache/okdomains cache/tbddomains cache/alldomains
+
+        ./scripts/clean_cache.py
+
+        ls -lh cache/nxdomains cache/okdomains cache/tbddomains cache/alldomains
 
         mv cache/hash.txt cache/hash_old.txt
         sha1sum cache/nxdomains cache/okdomains cache/tbddomains > cache/hash.txt
-
-        # ./scripts/clean_cache.py
 
         git status
 

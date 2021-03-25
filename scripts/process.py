@@ -30,6 +30,7 @@ class SourceFile:
         super().__init__()
         self.cache_counter = 0
         self.filename = filename
+        self.all_domains = set()
         self.hosts = set()
         self.nxdomains = util.load_domains('./cache/nxdomains')
         self.okdomains = util.load_domains('./cache/okdomains')
@@ -83,6 +84,7 @@ class SourceFile:
         util.write_domains(self.nxdomains, './cache/nxdomains')
         util.write_domains(self.okdomains, './cache/okdomains')
         util.write_domains(self.tbddomains, './cache/tbddomains')
+        util.write_domains(self.all_domains, './cache/alldomains')
 
     def write_list(self):
         # with open(f"{SourceFile.OUTPUT_DIR}/{self.list_name}.json", 'w') as f:
@@ -187,6 +189,8 @@ class SourceFile:
         if not HostUtil.is_valid_domain(host):
             logging.error(f"{self.list_name} Ingore invalid domain: {host}")
             return False
+
+        self.all_domains.add(host)
 
         for exclusion in exclusions:
             # print(f"Checking {exclusion}")
