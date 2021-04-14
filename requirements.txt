@@ -1,7 +1,7 @@
-flake8==3.8.3
-pylint==2.6.0
-isort==5.4.2
-jsonschema==3.2.0
-dnspython==2.0.0
-GitPython==3.1.8
+flake8>=3.8.3
+pylint>=2.6.0
+isort>=5.4.2
+jsonschema>=3.2.0
+dnspython>=2.0.0
+GitPython>=3.1.8
 Jinja2>=2.11.3
