@@ -117,9 +117,16 @@ jobs:
         git checkout --orphan release
 
         ./scripts/gen_readme.py > README.md
-        git add sources blocklists README.md
+
+        wget --quiet https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-linux-amd64.tar.gz
+
+        tar zxvf pandoc-2.13-linux-amd64.tar.gz
+        chmod +x ./pandoc-2.13/bin/pandoc
+        ./pandoc-2.13/bin/pandoc README.md -f markdown -t html -s --metadata title="dnss-blocklist" -o index.html
+
+        git add sources blocklists README.md index.html
         # git add blocklists
-        git commit -m "Update blocklists from upstream" sources blocklists README.md
+        git commit -m "Update blocklists from upstream" sources blocklists README.md index.html
 
     - name: Force push data branch changes
       uses: ad-m/github-push-action@master
