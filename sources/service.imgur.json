@@ -1,0 +1,8 @@
+{
+  "name": "service.imgur",
+  "additions": [
+    "imgur.com",
+    "s.imgur.com",
+    "www.imgur.com"
+  ]
+}

@@ -80,6 +80,7 @@ jobs:
         ./scripts/process.py ./sources/piracy.json
         ./scripts/process.py ./sources/porn.json
         ./scripts/process.py ./sources/social_networks.json
+        ./scripts/process.py ./sources/service.*.json
 
     # - run: ./scripts/process.py ./sources/ad.json
     # - run: ./scripts/process.py ./sources/dating.json

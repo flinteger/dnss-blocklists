@@ -343,7 +343,7 @@ def main():
     format = "%(asctime)s %(thread)d %(levelname)s %(message)s"
     logging.basicConfig(
         # filename='dns-filters.log',
-        level=logging.DEBUG,
+        level=logging.INFO,
         datefmt=datefmt,
         format=format)
 

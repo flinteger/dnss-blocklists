@@ -1,0 +1,8 @@
+{
+  "name": "service.minecraft",
+  "additions": [
+    "education.minecraft.net",
+    "minecraft.net",
+    "www.minecraft.net"
+  ]
+}
