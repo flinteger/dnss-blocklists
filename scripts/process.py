@@ -46,7 +46,7 @@ class SourceFile:
         with open(self.filename) as f:
             data = json.load(f)
             self.list_name = data["name"]
-            sources = data['sources']
+            sources = data['sources'] if 'sources' in data else []
             exclusions = data["exclusions"] if 'exclusions' in data else []
             additions = data['additions'] if 'additions' in data else []
 
@@ -54,7 +54,9 @@ class SourceFile:
 
         # Add additions first
         if additions:
-            map(lambda h: self.hosts.add(h), additions)
+            for host in additions:
+                logging.debug(f"Add additions: {host}")
+                self.hosts.add(host)
 
         for s in sources:
             url = s["url"]
@@ -341,7 +343,7 @@ def main():
     format = "%(asctime)s %(thread)d %(levelname)s %(message)s"
     logging.basicConfig(
         # filename='dns-filters.log',
-        level=logging.INFO,
+        level=logging.DEBUG,
         datefmt=datefmt,
         format=format)
 
