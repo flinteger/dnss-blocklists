@@ -1,0 +1,10 @@
+{
+  "name": "service.zoom",
+  "additions": [
+    "api.zoom.com",
+    "api.zoom.us",
+    "zoom.com",
+    "zoom.com.cn",
+    "zoom.us"
+  ]
+}
