@@ -125,9 +125,8 @@ jobs:
         chmod +x ./pandoc-2.13/bin/pandoc
         ./pandoc-2.13/bin/pandoc README.md -f markdown -t html -s --metadata title="dnss-blocklist" -o index.html
 
-        git add sources blocklists README.md index.html
-        # git add blocklists
-        git commit -m "Update blocklists from upstream" sources blocklists README.md index.html
+        git add sources blocklists icons README.md index.html
+        git commit -m "Update blocklists from upstream"
 
     - name: Force push data branch changes
       uses: ad-m/github-push-action@master
