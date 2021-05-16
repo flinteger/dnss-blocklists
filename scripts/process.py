@@ -106,6 +106,8 @@ class SourceFile:
             ipv4_list = map(lambda x: "0.0.0.0 " + x, hosts_list)
             f.write('\n'.join(ipv4_list))
 
+            f.write('\n')
+
             ipv6_list = map(lambda x: ":: " + x, hosts_list)
             f.write('\n'.join(ipv6_list))
 
@@ -264,6 +266,10 @@ class SourceFile:
         if HostUtil.is_IPv4(host):
             logging.info(f"{self.list_name} Host {host} is IPv4 address, ignore")
             return False
+
+        if host.startswith('*.'):
+            logging.debug(f"{self.list_name} Host {host} is a wildcard, always alive")
+            return True
 
         # check cached NXDOMAIN first to save DNS query time
         if host in self.nxdomains:
