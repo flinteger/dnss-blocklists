@@ -1,7 +1,7 @@
 {
   "name": "service.twitch",
   "additions": [
-    "api.twitch.tv",
-    "twitch.tv"
+    "*.api.twitch.tv",
+    "*.twitch.tv"
   ]
 }

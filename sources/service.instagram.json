@@ -1,9 +1,9 @@
 {
   "name": "service.instagram",
   "additions": [
-    "cdninstagram.com",
-    "instagram.com",
-    "i.instagram.com",
-    "www.instagram.com"
+    "*.cdninstagram.com",
+    "*.i.instagram.com",
+    "*.instagram.com",
+    "*.www.instagram.com"
   ]
 }

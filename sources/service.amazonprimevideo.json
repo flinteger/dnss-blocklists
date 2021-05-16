@@ -1,7 +1,7 @@
 {
   "name": "service.amazonprimevideo",
   "additions": [
-    "primevideo.com",
-    "amazonvideo.com"
+    "*.amazonvideo.com",
+    "*.primevideo.com"
   ]
 }

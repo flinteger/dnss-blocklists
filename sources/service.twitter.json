@@ -1,9 +1,9 @@
 {
   "name": "service.twitter",
   "additions": [
-    "ads-twitter.com",
-    "t.co",
-    "twitter.com",
-    "twttr.com"
+    "*.ads-twitter.com",
+    "*.t.co",
+    "*.twitter.com",
+    "*.twttr.com"
   ]
 }

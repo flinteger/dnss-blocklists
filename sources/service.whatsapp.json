@@ -1,8 +1,8 @@
 {
   "name": "service.whatsapp",
   "additions": [
-    "api.whatsapp.com",
-    "whatsapp.com",
-    "whatsapp.net"
+    "*.api.whatsapp.com",
+    "*.whatsapp.com",
+    "*.whatsapp.net"
   ]
 }

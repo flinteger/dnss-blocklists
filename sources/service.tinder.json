@@ -1,7 +1,7 @@
 {
   "name": "service.tinder",
   "additions": [
-    "gotinder.com",
-    "tinder.com"
+    "*.gotinder.com",
+    "*.tinder.com"
   ]
 }
