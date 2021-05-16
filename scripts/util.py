@@ -34,3 +34,4 @@ def write_domains(domains: Set, file: str, reload: bool = True):
         domains_list = list(domains)
         domains_list.sort()
         f.write('\n'.join(domains_list))
+        f.write('\n')
