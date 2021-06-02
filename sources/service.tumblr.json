@@ -1,7 +1,6 @@
 {
   "name": "service.tumblr",
   "additions": [
-    "*.api.tumblr.com",
     "*.tumblr.com"
   ]
 }

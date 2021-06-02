@@ -1,10 +1,6 @@
 {
   "name": "service.hulu",
   "additions": [
-    "*.auth.hulu.com",
-    "*.hulu.com",
-    "*.secure.hulu.com",
-    "*.vortex.hulu.com",
-    "*.www.hulu.com"
+    "*.hulu.com"
   ]
 }

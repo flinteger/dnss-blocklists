@@ -1,7 +1,6 @@
 {
   "name": "service.vk",
   "additions": [
-    "*.api.vk.com",
     "*.userapi.com",
     "*.vk-portal.net",
     "*.vk.cc",

@@ -1,7 +1,6 @@
 {
   "name": "service.tiktok",
   "additions": [
-    "*.api.tiktok.com",
     "*.musical.ly",
     "*.tiktok.com",
     "*.tiktokcdn.liveplay.myqcloud.com",
