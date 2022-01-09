@@ -72,6 +72,7 @@ jobs:
       run: |
         # make all
         # ./scripts/process_all.sh
+        set -x
 
         # Remove wildcard domains from `cache/nxdomains`
         grep -v '*' cache/nxdomains > foo
