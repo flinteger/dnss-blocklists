@@ -75,8 +75,11 @@ jobs:
         set -x
 
         # Remove wildcard domains from `cache/nxdomains`
-        grep -v '*' cache/nxdomains > foo
-        mv foo cache/nxdomains
+        if [ -s cache/nxdomains ]; then
+          # if cache/nxdomains is empty, grep return 1 will cause script failure.
+          grep -v '*' cache/nxdomains > foo
+          mv foo cache/nxdomains
+        fi
 
         ./scripts/process.py ./sources/ad.json
         ./scripts/process.py ./sources/dating.json
