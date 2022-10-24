@@ -83,6 +83,7 @@ jobs:
 
         ./scripts/process.py ./sources/ad.json
         ./scripts/process.py ./sources/dating.json
+        ./scripts/process.py ./sources/game.json
         ./scripts/process.py ./sources/gambling.json
         ./scripts/process.py ./sources/malicious.json
         ./scripts/process.py ./sources/piracy.json

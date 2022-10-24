@@ -17,6 +17,7 @@ trap cleanup INT
 ./scripts/process.py ./sources/piracy.json &
 ./scripts/process.py ./sources/porn.json &
 ./scripts/process.py ./sources/social_networks.json &
+./scripts/process.py ./sources/game.json &
 
 # wait all background jobs finished
 wait

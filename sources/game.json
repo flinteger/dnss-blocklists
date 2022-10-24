@@ -1,0 +1,20 @@
+{
+  "name": "game",
+  "description": "Game websites",
+  "sources": [
+    {
+      "name": "Safe Access domain list Game",
+      "website": "https://github.com/jankais3r/Synology-Safe-Access-domain-list",
+      "description": "",
+      "license": "Unknown",
+      "url": "https://raw.githubusercontent.com/jankais3r/Synology-Safe-Access-domain-list/master/games.txt",
+      "format": "domains"
+    }
+  ],
+  "additions": [
+    "hero-wars.com",
+    "onionfist.com"
+  ],
+  "exclusions": [
+  ]
+}

@@ -9,6 +9,7 @@ BASEURL="https://dnss-blocklist.flinteger.com/blocklists"
 
 BLOCKLISTS="ad.domains.txt
             dating.domains.txt
+            game.domains.txt
             gambling.domains.txt
             malicious.domains.txt
             piracy.domains.txt
@@ -71,4 +72,3 @@ do
       mv -fv $blocklist $BLOCKLISTD_DIR
     fi
 done
-

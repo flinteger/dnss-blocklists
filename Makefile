@@ -15,6 +15,7 @@ lint:
 	jsonschema -i sources/piracy.json sources/schema.json
 	jsonschema -i sources/porn.json sources/schema.json
 	jsonschema -i sources/social_networks.json sources/schema.json
+	jsonschema -i sources/game.json sources/schema.json
 	./scripts/validate_source.py sources/*.json
 	flake8
 	pylint scripts

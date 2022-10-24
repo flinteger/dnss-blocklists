@@ -17,6 +17,7 @@ def main(domains: List[str]):
         'blocklists/piracy.domains.txt',
         'blocklists/social_networks.domains.txt',
         'blocklists/dating.domains.txt',
+        'blocklists/game.domains.txt',
         'blocklists/gambling.domains.txt',
         'blocklists/porn.domains.txt'
     ]
