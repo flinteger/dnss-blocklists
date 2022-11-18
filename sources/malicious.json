@@ -3,18 +3,6 @@
   "description": "Malicious, malware, spyware, phishing etc",
   "sources": [
     {
-      "name": "Malware Domain List",
-      "description": "Malware Domain List is a non-commercial community project.",
-      "url": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
-      "format": "hosts"
-    },
-    {
-      "name": "Unified hosts file with base extensions",
-      "description": "Consolidating and extending hosts files from several well-curated sources.",
-      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Dead/hosts",
-      "format": "hosts"
-    },
-    {
       "name": "Phishing Harmy",
       "description": "Generated every 6 hours from PhishTank, OpenPhish, Cert.pl and PhishFindR reports.",
       "url": "https://phishing.army/download/phishing_army_blocklist.txt",

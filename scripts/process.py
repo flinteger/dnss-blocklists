@@ -5,6 +5,7 @@ import concurrent.futures
 import json
 import logging
 import os
+import random
 import re
 import shutil
 import sys
@@ -18,8 +19,37 @@ import dns.rcode
 import util
 
 
+MAX_WORKERS = 200
+DNS_TIMEOUT = 10  # in seconds
+DNS_SERVERS = [   # Use multiple DNS servers to avoid rate limit
+    # Cloudflare
+    '1.1.1.1',
+    '1.0.0.1',
+
+    # Google
+    '8.8.8.8',
+    '8.8.4.4',
+
+    # Quad9
+    '9.9.9.9',
+    '149.112.112.112',
+
+    # OpenDNS
+    '208.67.222.222',
+    '208.67.220.220',
+
+    # Control D
+    '76.76.2.0',
+    '76.76.10.0',
+
+    # CenturyLink
+    '205.171.2.65'
+]
+
+
 def usage():
     print(f"Usage: {sys.argv[0]} file ...")
+    print(f"Example: {sys.argv[0]} sources/ad.json")
 
 
 class SourceFile:
@@ -247,7 +277,7 @@ class SourceFile:
 
         logging.debug(f"{self.list_name} begin cleanup hosts. hosts: {total}")
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=300) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             for host, alive in zip(self.hosts, executor.map(self._is_alive_host, self.hosts)):
                 with clean_hosts_lock:
                     i += 1
@@ -284,25 +314,31 @@ class SourceFile:
         #     logging.debug(f"{self.list_name} Host {host} in tbddomains, alive")
         #     return True
 
+        not_sure = False
         exist = False
         try:
             q = dns.message.make_query(host, 'A')
-            response = dns.query.udp(q, '1.1.1.1', timeout=5)   # timeout in seconds
+            dns_server = random.choice(DNS_SERVERS)
+            response = dns.query.udp(q, dns_server, timeout=DNS_TIMEOUT)   # timeout in seconds
             rcode = response.rcode()
-            logging.debug(f"{self.list_name} DNS query response code: {rcode}. host: {host}")
+            logging.debug(f"{self.list_name} DNS query response code: {rcode}. host={host} dns_server={dns_server}")
             if rcode == dns.rcode.NXDOMAIN:
-                logging.info(f"{self.list_name} Host is not exist anymore, ignore. host: {host}")
+                logging.info(f"{self.list_name} Host is not exist anymore, ignore. host={host} dns_server={dns_server}")
                 with self.lock:
                     self.nxdomains.add(host)
                     self._increase_cache_counter()
                 return False
             if rcode == dns.rcode.NOERROR:
+                logging.debug(f"{self.list_name} Host have valid DNS A record. host={host} dns_server={dns_server}")
                 exist = True
             else:
-                logging.info(f"{self.list_name} DNS query return un-handled rcode: {rcode}. host: {host}")
-
+                logging.info(f"{self.list_name} DNS query return un-handled rcode: {rcode}. host={host} dns_server={dns_server}")
+        except dns.exception.Timeout:
+            # timeout probably due to DNS server is not set up correct for that domain.
+            logging.error(f"{self.list_name} DNS query failed: timeout host={host} dns_server={dns_server}")
         except Exception as e:
-            logging.error(f"{self.list_name} DNS query failed: {e} host: {host}")
+            logging.error(f"{self.list_name} DNS query failed: {e} host={host} dns_server={dns_server}")
+            not_sure = True    # set to true to avoid missing a host
 
         with self.lock:
             if exist:
@@ -312,7 +348,8 @@ class SourceFile:
                 self.tbddomains.add(host)
                 self._increase_cache_counter()
 
-        return True
+        return exist or not_sure
+
 
     def _increase_cache_counter(self):
         self.cache_counter += 1
@@ -349,7 +386,7 @@ def main():
     format = "%(asctime)s %(thread)d %(levelname)s %(message)s"
     logging.basicConfig(
         # filename='dns-filters.log',
-        level=logging.INFO,
+        level=logging.DEBUG,
         datefmt=datefmt,
         format=format)
 
