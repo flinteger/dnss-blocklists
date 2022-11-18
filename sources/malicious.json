@@ -61,6 +61,10 @@
       "description": "shallalist spyware",
       "url": "https://raw.githubusercontent.com/cbuijs/shallalist/master/spyware/domains",
       "format": "domains"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt",
+      "format": "hosts"
     }
   ],
   "exclusions": [
