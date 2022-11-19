@@ -39,11 +39,8 @@ DNS_SERVERS = [   # Use multiple DNS servers to avoid rate limit
     '208.67.220.220',
 
     # Control D
-    '76.76.2.0',
-    '76.76.10.0',
-
-    # CenturyLink
-    '205.171.2.65'
+    # '76.76.2.0',
+    # '76.76.10.0'
 ]
 
 
