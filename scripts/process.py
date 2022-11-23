@@ -12,12 +12,12 @@ import sys
 import threading
 import urllib.request
 from typing import List
+from zipfile import ZIP_DEFLATED, ZipFile
 
 import dns.message
 import dns.query
 import dns.rcode
 import util
-
 
 MAX_WORKERS = 200
 DNS_TIMEOUT = 10  # in seconds
@@ -121,10 +121,17 @@ class SourceFile:
         #     hosts_list.sort()
         #     f.write(json.dumps(hosts_list, sort_keys=True, indent=2))
 
-        with open(f"{SourceFile.OUTPUT_DIR}/{self.list_name}.domains.txt", 'w') as f:
+        domains_txt = f"{SourceFile.OUTPUT_DIR}/{self.list_name}.domains.txt"
+        with open(domains_txt, 'w') as f:
             hosts_list = list(self.hosts)
             hosts_list.sort()
             f.write('\n'.join(hosts_list))
+
+        # compress .domains.txt
+        if os.path.exists(domains_txt):
+            out_zip = f"{domains_txt}.zip"
+            with ZipFile(out_zip, "w", ZIP_DEFLATED) as zip:
+                zip.write(domains_txt, f"{self.list_name}.domains.txt")
 
         with open(f"{SourceFile.OUTPUT_DIR}/{self.list_name}.hosts", 'w') as f:
             hosts_list = list(self.hosts)
