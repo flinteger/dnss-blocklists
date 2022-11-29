@@ -12,6 +12,7 @@ import sys
 import threading
 import urllib.request
 from typing import List
+from urllib.parse import urlparse
 from zipfile import ZIP_DEFLATED, ZipFile
 
 import dns.message
@@ -102,6 +103,8 @@ class SourceFile:
                 self.process_domains(filename, exclusions)
             elif format == "abp":
                 self.process_abp(filename, exclusions)
+            elif format == "urls":
+                self.process_urls(filename, exclusions)
             else:
                 logging.error(f"{self.list_name} Unknown format: {format}: {url}")
 
@@ -189,6 +192,27 @@ class SourceFile:
                 # logging.debug(f"{self.list_name} Processing line: {line}")
 
                 if self.process_host(line, exclusions):
+                    count += 1
+
+            logging.info(f"{self.list_name} Processed {filename}. hosts: {count}")
+
+    def process_urls(self, filename: str, exclusions: List[str]):
+        with open(filename) as f:
+            count = 0
+            for line in f.readlines():
+                line = line.strip()
+                if len(line) == 0 or line.isspace() or line.startswith("#"):
+                    # skip empty or comment line
+                    continue
+
+                # logging.debug(f"{self.list_name} Processing line: {line}")
+                url = urlparse(line)
+                netloc = url.netloc     # may include port, e.g. example.com:8080
+                if not netloc:
+                    continue
+
+                host = netloc.split(':')[0]
+                if self.process_host(host, exclusions):
                     count += 1
 
             logging.info(f"{self.list_name} Processed {filename}. hosts: {count}")

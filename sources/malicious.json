@@ -3,10 +3,16 @@
   "description": "Malicious, malware, spyware, phishing etc",
   "sources": [
     {
-      "name": "Phishing Harmy",
+      "name": "Phishing Army",
       "description": "Generated every 6 hours from PhishTank, OpenPhish, Cert.pl and PhishFindR reports.",
       "url": "https://phishing.army/download/phishing_army_blocklist.txt",
       "format": "domains"
+    },
+    {
+      "name": "OpenPhish",
+      "description": "Phishing URL lists",
+      "url": "https://openphish.com/feed.txt",
+      "format": "urls"
     },
     {
       "name": "Badd-Boyz-Hosts",
@@ -19,18 +25,6 @@
       "description": "The-Big-List-of-Hacked-Malware-Web-Sites",
       "url": "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
       "format": "hosts"
-    },
-    {
-      "name": "joewein dom-bl-base",
-      "description": "",
-      "url": "https://joewein.net/dl/bl/dom-bl-base.txt",
-      "format": "domains"
-    },
-    {
-      "name": "joewein dom-bl",
-      "description": "",
-      "url": "https://joewein.net/dl/bl/dom-bl.txt",
-      "format": "domains"
     },
     {
       "name": "immortal_domains",
