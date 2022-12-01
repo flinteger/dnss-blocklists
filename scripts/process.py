@@ -248,8 +248,9 @@ class SourceFile:
             logging.info(f"{self.list_name} Processed {filename}. hosts: {count}")
 
     def process_host(self, host: str, exclusions: List[str]) -> bool:
+        host = host.lower()
         if not HostUtil.is_valid_domain(host):
-            logging.error(f"{self.list_name} Ingore invalid domain: {host}")
+            logging.error(f"{self.list_name} Ignore invalid domain: {host}")
             return False
 
         self.all_domains.add(host)
