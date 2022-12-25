@@ -1,3 +1,3 @@
-20939b13b07d833d1e02a23da4a4090e4a7ba2bb  cache/nxdomains
-646957fb6295cd561f80893c36a6fb9d2c7de4fd  cache/okdomains
+ad6f612c3e624743877a7947301b214478e8a2c5  cache/nxdomains
+3551a5c3ac8b4bbf1294d4c5e2b05d5c43e76309  cache/okdomains
 2eab6f54bed22cf13753990648a987c719c1911b  cache/tbddomains
