@@ -130,11 +130,11 @@ jobs:
 
         ./scripts/gen_readme.py > README.md
 
-        wget --quiet https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-linux-amd64.tar.gz
+        wget --quiet https://github.com/jgm/pandoc/releases/download/3.0.1/pandoc-3.0.1-linux-amd64.tar.gz
 
-        tar zxvf pandoc-2.13-linux-amd64.tar.gz
-        chmod +x ./pandoc-2.13/bin/pandoc
-        ./pandoc-2.13/bin/pandoc README.md -f markdown -t html -s --metadata title="dnss-blocklist" -o index.html
+        tar zxvf pandoc-3.0.1-linux-amd64.tar.gz
+        chmod +x ./pandoc-3.0.1/bin/pandoc
+        ./pandoc-3.0.1/bin/pandoc README.md -f markdown -t html -s --metadata title="dnss-blocklist" -o index.html
 
         git add sources blocklists icons README.md index.html 404.html
         git commit -m "Update blocklists from upstream" sources blocklists icons README.md index.html 404.html
