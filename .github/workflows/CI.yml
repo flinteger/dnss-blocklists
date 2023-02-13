@@ -35,9 +35,7 @@ jobs:
     - name: Get pip cache directory
       id: pip-cache
       run: |
-        # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
         echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
-
 
     - name: Cache pip dependencies
       uses: actions/cache@v3
