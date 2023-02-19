@@ -20,7 +20,7 @@ import dns.query
 import dns.rcode
 import util
 
-MAX_WORKERS = 300
+MAX_WORKERS = 200
 DNS_TIMEOUT = 5  # in seconds
 DNS_SERVERS = [   # Use multiple DNS servers to avoid rate limit
     # Cloudflare
@@ -413,9 +413,11 @@ def main():
     datefmt = "%Y-%m-%dT%H:%M:%S%Z"
     # format = "%(asctime)s pid=%(process)d tid=%(thread)d logger=%(name)s level=%(levelname)s %(message)s"
     format = "%(asctime)s %(thread)d %(levelname)s %(message)s"
+    levelName = os.environ.get("LOG_LEVEL", "INFO")
+    level = logging.getLevelName(levelName)
     logging.basicConfig(
         # filename='dns-filters.log',
-        level=logging.DEBUG,
+        level=level,  # logging.DEBUG,
         datefmt=datefmt,
         format=format)
 

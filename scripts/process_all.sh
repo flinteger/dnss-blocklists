@@ -10,6 +10,8 @@ cleanup()
 
 trap cleanup INT
 
+mkdir -p blocklists
+
 ./scripts/process.py ./sources/ad.json &
 ./scripts/process.py ./sources/dating.json &
 ./scripts/process.py ./sources/gambling.json &
