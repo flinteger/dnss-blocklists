@@ -20,8 +20,8 @@ import dns.query
 import dns.rcode
 import util
 
-MAX_WORKERS = 200
-DNS_TIMEOUT = 10  # in seconds
+MAX_WORKERS = 300
+DNS_TIMEOUT = 5  # in seconds
 DNS_SERVERS = [   # Use multiple DNS servers to avoid rate limit
     # Cloudflare
     '1.1.1.1',

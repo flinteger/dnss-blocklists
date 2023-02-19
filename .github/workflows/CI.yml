@@ -35,7 +35,7 @@ jobs:
     - name: Get pip cache directory
       id: pip-cache
       run: |
-        echo "::set-output name=dir::$(pip cache dir)"
+        echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
 
     - name: Cache pip dependencies
       uses: actions/cache@v3
@@ -53,4 +53,3 @@ jobs:
         #
         # https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#adding-a-system-path
         echo "/home/runner/.local/bin" >> $GITHUB_PATH
-
