@@ -19,7 +19,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.8
+        python-version: 3.11
         architecture: x64
 
     - name: Check build env
@@ -41,10 +41,10 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ${{ steps.pip-cache.outputs.dir }}
-        key: ${{ runner.os }}-python-3.8-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-python-3.11-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
-          ${{ runner.os }}-python-3.8-${{ hashFiles('**/requirements.txt') }}
-          ${{ runner.os }}-python-3.8-
+          ${{ runner.os }}-python-3.11-${{ hashFiles('**/requirements.txt') }}
+          ${{ runner.os }}-python-3.11-
 
     - name: Setup
       run: |
