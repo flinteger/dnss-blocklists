@@ -3,11 +3,11 @@
   "description": "Game websites",
   "sources": [
     {
-      "name": "Safe Access domain list Game",
-      "website": "https://github.com/jankais3r/Synology-Safe-Access-domain-list",
+      "name": "ut1-blacklists games",
+      "website": "https://raw.githubusercontent.com/olbat/ut1-blacklists",
       "description": "",
       "license": "Unknown",
-      "url": "https://raw.githubusercontent.com/jankais3r/Synology-Safe-Access-domain-list/master/games.txt",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/games/domains",
       "format": "domains"
     }
   ],
