@@ -1,0 +1,6 @@
+0.0.0.0 *.vimeo-video.map.fastly.net
+0.0.0.0 *.vimeo.com
+0.0.0.0 *.vimeo.map.fastly.net
+:: *.vimeo-video.map.fastly.net
+:: *.vimeo.com
+:: *.vimeo.map.fastly.net
