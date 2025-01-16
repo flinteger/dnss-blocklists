@@ -1,0 +1,141 @@
+{
+  "name": "ad",
+  "description": "Ad and trackers, privacy",
+  "sources": [
+    {
+      "name": "1Hosts (Lite)",
+      "website": "https://github.com/badmojr/1Hosts",
+      "description": "Protect your 'data' & eyeballs from being auctioned to the highest bidder.",
+      "license": "Unknown",
+      "url": "https://badmojr.github.io/1Hosts/Lite/domains.txt",
+      "format": "domains"
+    },
+    {
+      "name": "280blocker",
+      "website": "https://280blocker.net",
+      "description": "280blocker adblock domain lists (JP).",
+      "license": "Unknown",
+      "url": "https://280blocker.net/files/280blocker_domain.txt",
+      "format": "domains"
+    },
+    {
+      "name": "add.2o7Net",
+      "website": "https://github.com/FadeMind/hosts.extras",
+      "description": "2o7 Network tracking.",
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/COPYING",
+      "url": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts",
+      "format": "hosts"
+    },
+    {
+      "name": "ad-wars",
+      "description": "Ad (CN)",
+      "website": "https://github.com/jdlingyu/ad-wars",
+      "url": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+      "format": "hosts"
+    },
+    {
+      "name": "AdAway",
+      "website": "https://github.com/AdAway/adaway.github.io",
+      "description": "Blocking mobile ad providers and some analytics providers.",
+      "license": "GPLv3",
+      "license_url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "format": "hosts"
+    },
+    {
+      "name": "anti-AD",
+      "website": "https://github.com/privacy-protection-tools/anti-AD",
+      "description": "anti-AD是目前中文区命中率最高的广告过滤列表，实现了精确的广告屏蔽和隐私保护。",
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/LICENSE",
+      "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
+      "format": "domains"
+    },
+    {
+      "name": "AdGuard DNS filter",
+      "website": "https://github.com/AdguardTeam/AdguardSDNSFilter",
+      "description": "A filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
+      "license": "GPLv3",
+      "license_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/LICENSE",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/rules.txt",
+      "format": "abp"
+    },
+    {
+      "name": "notracking/hosts-blocklists",
+      "website": "https://github.com/notracking/hosts-blocklists",
+      "description": "No more ads, tracking and other virtual garbage. All blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis.",
+      "license": "Unknown",
+      "url": "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt",
+      "format": "domains"
+    },
+    {
+      "name": "Cauchon/NSABlocklist-pi-hole-edition",
+      "website": "https://github.com/Cauchon/NSABlocklist-pi-hole-edition",
+      "description": "HOSTS file to block most known NSA / GCHQ / C.I.A. / F.B.I. spying servers. List is optimized for pi-hole.",
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/Cauchon/NSABlocklist-pi-hole-edition/master/LICENSE",
+      "url": "https://raw.githubusercontent.com/Cauchon/NSABlocklist-pi-hole-edition/master/HOSTS%20(excluding%20most%20GOV%20URLs)",
+      "format": "domains"
+    }
+  ],
+  "additions": [
+    "ppt.ifsp.tv",
+    "ppt.ifvod.tv"
+  ],
+  "exclusions": [
+    "*.exacttarget.com",
+    "148.xg4ken.com",
+    "51.la",
+    "ad.atdmt.com",
+    "ad.doubleclick.net",
+    "anyporn.com",
+    "app.pendo.io",
+    "bongacams.com",
+    "browser-update.org",
+    "click.redditmail.com",
+    "clickserve.dartsearch.net",
+    "cnzz.com",
+    "coinpot.co",
+    "cts.businesswire.com",
+    "e-10077.adzerk.net",
+    "exacttarget.com.edgekey.net",
+    "get-express-vpn.com",
+    "go.pardot.com",
+    "googletagmanager.com",
+    "goto-target-com.customtraffic.impactradius.com",
+    "hotjar.com",
+    "iesnare.com",
+    "iqoption.com",
+    "issuecdn.baidupcs.com",
+    "lentainform.com",
+    "livejasmin.com",
+    "m.yap.yahoo.com",
+    "marinetraffic.com",
+    "my.nextdns.io",
+    "nextdns.io",
+    "nextdoor.com",
+    "nexus.ensighten.com",
+    "pi.pardot.com",
+    "qualtrics.com",
+    "rebrand.ly",
+    "smartasset.com",
+    "softonic.com",
+    "statcounter.com",
+    "survey.medallia.com",
+    "sysdig.com",
+    "thirdparty.bnc.lt",
+    "to8to.com",
+    "umeng.com",
+    "uol.com.br",
+    "vectorstock.com",
+    "visitor.r20.constantcontact.com",
+    "www-googletagmanager.l.google.com",
+    "www.googleadservices.com",
+    "www.googletagmanager.com",
+    "www.rebrand.ly",
+    "www.voiceads.cn",
+    "xmrpool.net",
+    "xnxx.com"
+  ]
+}
