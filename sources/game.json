@@ -1,0 +1,22 @@
+{
+  "name": "game",
+  "description": "Game websites",
+  "sources": [
+    {
+      "name": "ut1-blacklists games",
+      "website": "https://raw.githubusercontent.com/olbat/ut1-blacklists",
+      "description": "",
+      "license": "Unknown",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/games/domains",
+      "format": "domains"
+    }
+  ],
+  "additions": [
+    "hero-wars.com",
+    "mathplayground.com",
+    "onionfist.com",
+    "www.mathplayground.com"
+  ],
+  "exclusions": [
+  ]
+}
