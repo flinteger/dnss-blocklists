@@ -14,8 +14,8 @@ on:
 jobs:
   CD:
 
-    # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md
-    runs-on: ubuntu-20.04
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
