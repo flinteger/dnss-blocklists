@@ -76,6 +76,9 @@ jobs:
         # make all
         # ./scripts/process_all.sh
         set -x
+        ulimit -a
+        ulimit -n unlimited
+        ulimit -a
 
         # Remove wildcard domains from `cache/nxdomains`
         if [ -s cache/nxdomains ]; then
