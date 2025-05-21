@@ -8,6 +8,6 @@
 
 DNS blocklists aggregate from various well known sources.
 
-*Data automatically update every 3 hours.*
+*Data automatically update every 12 hours.*
 
 Checkout the blocklists data on [release branch](https://github.com/flinteger/dnss-blocklists/tree/release).
