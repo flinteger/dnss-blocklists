@@ -1,0 +1,7 @@
+{
+  "name": "service.whatsapp",
+  "additions": [
+    "*.whatsapp.com",
+    "*.whatsapp.net"
+  ]
+}
