@@ -1,0 +1,2 @@
+*.skype.com
+*.skypeassets.com
