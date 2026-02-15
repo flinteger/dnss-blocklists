@@ -1,0 +1,6 @@
+{
+  "name": "service.hulu",
+  "additions": [
+    "*.hulu.com"
+  ]
+}

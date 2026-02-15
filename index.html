@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>dnss-blocklist</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">dnss-blocklist</h1>
+</header>
+<h1 id="dns-blocklists">DNS Blocklists</h1>
+<p><img
+src="https://github.com/flinteger/dnss-blocklists/workflows/CI/badge.svg?branch=master"
+alt="CI" /> <img
+src="https://github.com/flinteger/dnss-blocklists/workflows/CD/badge.svg?branch=master"
+alt="CD" /> <a
+href="https://github.com/flinteger/dnss-blocklists/commits/release"><img
+src="https://img.shields.io/github/last-commit/flinteger/dnss-blocklists.svg"
+alt="last commit" /></a> <a
+href="https://github.com/flinteger/dnss-blocklists"><img
+src="https://img.shields.io/github/repo-size/flinteger/dnss-blocklists.svg"
+alt="repo size" /></a></p>
+<p>DNS blocklists aggregate from various well known sources.</p>
+<p><em>Data automatically update every 12 hours.</em></p>
+<p><strong>Last updated</strong>: 2026-02-15T13:06:14</p>
+<h2 id="blocklists">Blocklists</h2>
+<ul>
+<li><a href="#malicious">malicious</a></li>
+<li><a href="#ad">ad</a></li>
+<li><a href="#gambling">gambling</a></li>
+<li><a href="#piracy">piracy</a></li>
+<li><a href="#dating">dating</a></li>
+<li><a href="#porn">porn</a></li>
+<li><a href="#social_networks">social_networks</a></li>
+</ul>
+<h3 id="malicious">malicious</h3>
+<p>Malicious, malware, spyware, phishing etc</p>
+<p><strong>Data source</strong>: <a
+href="sources/malicious.json">sources/malicious.json</a></p>
+<p><strong>Count</strong>: 167763</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/malicious.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/malicious.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/malicious.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/malicious.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ad">ad</h3>
+<p>Ad and trackers, privacy</p>
+<p><strong>Data source</strong>: <a
+href="sources/ad.json">sources/ad.json</a></p>
+<p><strong>Count</strong>: 421157</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/ad.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/ad.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/ad.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/ad.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gambling">gambling</h3>
+<p>Gambling</p>
+<p><strong>Data source</strong>: <a
+href="sources/gambling.json">sources/gambling.json</a></p>
+<p><strong>Count</strong>: 22097</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/gambling.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/gambling.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/gambling.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/gambling.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="piracy">piracy</h3>
+<p>Piracy, Copyright infringement etc</p>
+<p><strong>Data source</strong>: <a
+href="sources/piracy.json">sources/piracy.json</a></p>
+<p><strong>Count</strong>: 2424</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/piracy.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/piracy.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/piracy.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/piracy.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dating">dating</h3>
+<p>Dating</p>
+<p><strong>Data source</strong>: <a
+href="sources/dating.json">sources/dating.json</a></p>
+<p><strong>Count</strong>: 4514</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/dating.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/dating.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/dating.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/dating.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="porn">porn</h3>
+<p>Porn</p>
+<p><strong>Data source</strong>: <a
+href="sources/porn.json">sources/porn.json</a></p>
+<p><strong>Count</strong>: 64079</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/porn.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/porn.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/porn.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/porn.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="social_networks">social_networks</h3>
+<p>Social networks</p>
+<p><strong>Data source</strong>: <a
+href="sources/social_networks.json">sources/social_networks.json</a></p>
+<p><strong>Count</strong>: 660</p>
+<p><strong>Download</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hosts</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/social_networks.hosts">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/social_networks.hosts</a></td>
+</tr>
+<tr class="even">
+<td>domains</td>
+<td><a
+href="https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/social_networks.domains.txt">https://raw.githubusercontent.com/flinteger/dnss-blocklists/release/blocklists/social_networks.domains.txt</a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

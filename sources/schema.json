@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://github.com/ednsp/sources/schema.json",
+  "type": "object",
+  "title": "source schema",
+  "description": "The filter source schema",
+  "required": [
+    "name",
+    "description",
+    "sources"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "Filter list name",
+      "description": "Filter list name",
+      "default": ""
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "Filter description",
+      "description": "Filter description",
+      "default": ""
+    },
+    "sources": {
+      "$id": "#/properties/sources",
+      "type": "array",
+      "title": "The filter sources",
+      "description": "The filter sources.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/sources/items",
+        "$ref": "#/definitions/source"
+      }
+    },
+    "additions": {
+      "$id": "#/properties/additions",
+      "type": "array",
+      "title": "Additional to filter",
+      "description": "Additional to filter",
+      "uniqueItems": true,
+      "default": ""
+    },
+    "exclusions": {
+      "$id": "#/properties/exclusions",
+      "type": "array",
+      "title": "Exclusions to filter",
+      "description": "Excluded domains from filter, to solve false positive",
+      "uniqueItems": true,
+      "default": ""
+    }
+  },
+  "definitions": {
+    "source": {
+      "type": "object",
+      "title": "Filter source",
+      "description": "Filter source.",
+      "default": {},
+      "required": [
+        "url",
+        "format"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Filter source name",
+          "description": "Filter source name.",
+          "default": ""
+        },
+        "website": {
+          "type": "string",
+          "title": "Website URL",
+          "description": "Website URL.",
+          "format": "uri",
+          "pattern": "^(https?)://",
+          "default": ""
+        },
+        "description": {
+          "type": "string",
+          "title": "Filter source description",
+          "description": "Filter source description.",
+          "default": ""
+        },
+        "license": {
+          "type": "string",
+          "title": "License",
+          "description": "License type.",
+          "enum": ["MIT", "GPLv3", "Unknown"],
+          "default": ""
+        },
+        "license_url": {
+          "type": "string",
+          "title": "License URL",
+          "description": "License URL.",
+          "format": "uri",
+          "pattern": "^(https?)://",
+          "default": ""
+        },
+        "url": {
+          "type": "string",
+          "title": "Filter source url",
+          "description": "Filter source url.",
+          "default": ""
+        },
+        "format": {
+          "type": "string",
+          "title": "Filter source data format",
+          "description": "Filter source data format.",
+          "enum": ["hosts", "domains", "abp"],
+          "default": ""
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
