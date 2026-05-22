@@ -1,0 +1,21 @@
+{
+  "name": "gambling",
+  "description": "Gambling",
+  "sources": [
+    {
+      "name": "ut1-blacklists gambling",
+      "description": "ut1-blacklists gambling",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/gambling/domains",
+      "format": "domains"
+    },
+    {
+      "name": "gambling-hosts",
+      "description": "gambling-hosts",
+      "url": "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
+      "format": "hosts"
+    }
+  ],
+  "additions": [
+    "qs8866.cc"
+  ]
+}

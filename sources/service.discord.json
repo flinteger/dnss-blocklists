@@ -1,0 +1,10 @@
+{
+  "name": "service.discord",
+  "additions": [
+    "*.discord.com",
+    "*.discord.gg",
+    "*.discord.media",
+    "*.discordapp.com",
+    "*.discordapp.net"
+  ]
+}

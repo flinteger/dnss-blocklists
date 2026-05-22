@@ -1,0 +1,35 @@
+{
+  "name": "social_networks",
+  "description": "Social networks",
+  "sources": [
+    {
+      "name": "ut1-blacklist social networks",
+      "description": "ut1-blacklist social networks",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/social_networks/domains",
+      "format": "domains"
+    }
+  ],
+  "additions": [
+    "0.twitter.com",
+    "api.facebook.com",
+    "api.twitter.com",
+    "facebook.com",
+    "live.twitter.com",
+    "m.facebook.com",
+    "m.twitter.com",
+    "mobile.twitter.com",
+    "td.twitter.com",
+    "tweetdeck.twitter.com",
+    "twitter.com",
+    "www.facebook.com",
+    "www.twitter.com",
+    "www2.twitter.com"
+  ],
+  "exclusions": [
+    "*.edge-mqtt.facebook.com",
+    "*.graph.facebook.com",
+    "*.telegram.org",
+    "*.whatsapp.com",
+    "*.xx.fbcdn.net"
+  ]
+}
