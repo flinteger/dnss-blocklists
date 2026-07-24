@@ -1,0 +1,2 @@
+*.disney-plus.net
+*.disneyplus.com
