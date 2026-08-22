@@ -1,0 +1,14 @@
+0.0.0.0 *.sc-cdn.net
+0.0.0.0 *.sc-gw.com
+0.0.0.0 *.sc-jpl.com
+0.0.0.0 *.sc-prod.net
+0.0.0.0 *.snap-dev.net
+0.0.0.0 *.snapads.com
+0.0.0.0 *.snapchat.com
+:: *.sc-cdn.net
+:: *.sc-gw.com
+:: *.sc-jpl.com
+:: *.sc-prod.net
+:: *.snap-dev.net
+:: *.snapads.com
+:: *.snapchat.com

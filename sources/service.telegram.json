@@ -1,0 +1,8 @@
+{
+  "name": "service.telegram",
+  "additions": [
+    "*.t.me",
+    "*.telegram.me",
+    "*.telegram.org"
+  ]
+}

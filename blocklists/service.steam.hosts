@@ -1,0 +1,14 @@
+0.0.0.0 *.steam-chat.com
+0.0.0.0 *.steamcdn-a.akamaihd.net
+0.0.0.0 *.steamcommunity.com
+0.0.0.0 *.steamgames.com
+0.0.0.0 *.steampowered.com
+0.0.0.0 *.steamstore-a.akamaihd.net
+0.0.0.0 *.steamusercontent-a.akamaihd.net
+:: *.steam-chat.com
+:: *.steamcdn-a.akamaihd.net
+:: *.steamcommunity.com
+:: *.steamgames.com
+:: *.steampowered.com
+:: *.steamstore-a.akamaihd.net
+:: *.steamusercontent-a.akamaihd.net
