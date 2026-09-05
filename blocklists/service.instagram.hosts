@@ -1,0 +1,4 @@
+0.0.0.0 *.cdninstagram.com
+0.0.0.0 *.instagram.com
+:: *.cdninstagram.com
+:: *.instagram.com
