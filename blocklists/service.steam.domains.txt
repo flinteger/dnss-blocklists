@@ -1,0 +1,7 @@
+*.steam-chat.com
+*.steamcdn-a.akamaihd.net
+*.steamcommunity.com
+*.steamgames.com
+*.steampowered.com
+*.steamstore-a.akamaihd.net
+*.steamusercontent-a.akamaihd.net

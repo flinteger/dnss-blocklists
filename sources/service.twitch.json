@@ -1,0 +1,6 @@
+{
+  "name": "service.twitch",
+  "additions": [
+    "*.twitch.tv"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "dating",
+  "description": "Dating",
+  "sources": [
+    {
+      "name": "ut1-blacklists dating",
+      "description": "ut1-blacklists dating",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/dating/domains",
+      "format": "domains"
+    }
+  ],
+  "additions": [
+    "*.christianmingle.com",
+    "*.eharmony.com",
+    "*.elitesingles.com",
+    "*.tinder.com",
+    "*.zoosk.com",
+    "api.dating.com",
+    "badolov.com",
+    "clubslane.com",
+    "dating.silversingles.com",
+    "iwillfindyou.love",
+    "kismia.com",
+    "myracinecounty.com",
+    "okcupid.com",
+    "seeking.com",
+    "top10bestdatingsites.com",
+    "top5-datingsites.com",
+    "www.amolatina.com",
+    "www.clickdate.com",
+    "www.clubslane.com",
+    "www.datemyage.com",
+    "www.dating.com",
+    "www.flirtstate.com",
+    "www.iwillfindyou.love",
+    "www.kismia.com",
+    "www.losangelesmatchmaking.com",
+    "www.losangelesprofessionalsingles.com",
+    "www.lovevite.com",
+    "www.match.com",
+    "www.myracinecounty.com",
+    "www.okcupid.com",
+    "www.ourtime.com",
+    "www.seeking.com",
+    "www.silversingles.com",
+    "www.trumingle.com",
+    "www.ztattoo.com",
+    "ztattoo.com"
+  ]
+}

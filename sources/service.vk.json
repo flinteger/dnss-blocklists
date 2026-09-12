@@ -1,0 +1,12 @@
+{
+  "name": "service.vk",
+  "additions": [
+    "*.userapi.com",
+    "*.vk-portal.net",
+    "*.vk.cc",
+    "*.vk.com",
+    "*.vk.link",
+    "*.vkontakte.ru",
+    "*.vkuservideo.net"
+  ]
+}

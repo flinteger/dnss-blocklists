@@ -1,0 +1,6 @@
+{
+  "name": "service.tumblr",
+  "additions": [
+    "*.tumblr.com"
+  ]
+}
