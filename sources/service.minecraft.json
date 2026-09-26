@@ -1,0 +1,6 @@
+{
+  "name": "service.minecraft",
+  "additions": [
+    "*.minecraft.net"
+  ]
+}

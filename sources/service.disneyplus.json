@@ -1,0 +1,7 @@
+{
+  "name": "service.disneyplus",
+  "additions": [
+    "*.disney-plus.net",
+    "*.disneyplus.com"
+  ]
+}
