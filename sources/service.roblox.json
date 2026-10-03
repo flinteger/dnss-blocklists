@@ -1,0 +1,7 @@
+{
+  "name": "service.roblox",
+  "additions": [
+    "*.rbxcdn.com",
+    "*.roblox.com"
+  ]
+}

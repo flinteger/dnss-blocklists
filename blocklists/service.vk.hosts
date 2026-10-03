@@ -1,0 +1,14 @@
+0.0.0.0 *.userapi.com
+0.0.0.0 *.vk-portal.net
+0.0.0.0 *.vk.cc
+0.0.0.0 *.vk.com
+0.0.0.0 *.vk.link
+0.0.0.0 *.vkontakte.ru
+0.0.0.0 *.vkuservideo.net
+:: *.userapi.com
+:: *.vk-portal.net
+:: *.vk.cc
+:: *.vk.com
+:: *.vk.link
+:: *.vkontakte.ru
+:: *.vkuservideo.net
