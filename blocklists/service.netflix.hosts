@@ -1,0 +1,12 @@
+0.0.0.0 *.netflix.com
+0.0.0.0 *.netflix.net
+0.0.0.0 *.nflxext.com
+0.0.0.0 *.nflximg.net
+0.0.0.0 *.nflxso.net
+0.0.0.0 *.nflxvideo.net
+:: *.netflix.com
+:: *.netflix.net
+:: *.nflxext.com
+:: *.nflximg.net
+:: *.nflxso.net
+:: *.nflxvideo.net

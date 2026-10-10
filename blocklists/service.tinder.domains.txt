@@ -1,0 +1,2 @@
+*.gotinder.com
+*.tinder.com
