@@ -1,0 +1,7 @@
+*.sc-cdn.net
+*.sc-gw.com
+*.sc-jpl.com
+*.sc-prod.net
+*.snap-dev.net
+*.snapads.com
+*.snapchat.com

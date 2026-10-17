@@ -1,0 +1,7 @@
+{
+  "name": "service.instagram",
+  "additions": [
+    "*.cdninstagram.com",
+    "*.instagram.com"
+  ]
+}
