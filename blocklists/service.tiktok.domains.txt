@@ -1,0 +1,4 @@
+*.musical.ly
+*.tiktok.com
+*.tiktokcdn.liveplay.myqcloud.com
+*.tiktokv.com
