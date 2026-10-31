@@ -1,0 +1,9 @@
+{
+  "name": "service.reddit",
+  "additions": [
+    "*.redd.it",
+    "*.reddit.com",
+    "*.redditmedia.com",
+    "*.redditstatic.com"
+  ]
+}
