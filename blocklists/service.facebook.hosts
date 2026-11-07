@@ -1,0 +1,8 @@
+0.0.0.0 *.facebook.com
+0.0.0.0 *.fb.com
+0.0.0.0 *.fb.me
+0.0.0.0 *.fbcdn.net
+:: *.facebook.com
+:: *.fb.com
+:: *.fb.me
+:: *.fbcdn.net
