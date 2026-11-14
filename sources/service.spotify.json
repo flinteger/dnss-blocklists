@@ -1,0 +1,11 @@
+{
+  "name": "service.spotify",
+  "additions": [
+    "*.audio-ak-spotify-com.akamaized.net",
+    "*.audio4-ak-spotify-com.akamaized.net",
+    "*.heads-ak-spotify-com.akamaized.net",
+    "*.heads4-ak-spotify-com.akamaized.net",
+    "*.spotify.com",
+    "*.spotifycdn.net"
+  ]
+}

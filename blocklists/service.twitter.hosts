@@ -1,0 +1,8 @@
+0.0.0.0 *.ads-twitter.com
+0.0.0.0 *.t.co
+0.0.0.0 *.twitter.com
+0.0.0.0 *.twttr.com
+:: *.ads-twitter.com
+:: *.t.co
+:: *.twitter.com
+:: *.twttr.com
