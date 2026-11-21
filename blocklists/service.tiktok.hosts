@@ -1,0 +1,8 @@
+0.0.0.0 *.musical.ly
+0.0.0.0 *.tiktok.com
+0.0.0.0 *.tiktokcdn.liveplay.myqcloud.com
+0.0.0.0 *.tiktokv.com
+:: *.musical.ly
+:: *.tiktok.com
+:: *.tiktokcdn.liveplay.myqcloud.com
+:: *.tiktokv.com
